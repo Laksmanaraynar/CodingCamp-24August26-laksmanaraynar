@@ -1,0 +1,340 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Scaffold project structure and testing environment": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881207002
+      },
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881220764
+      }
+    ],
+    "2.1 Implement `Storage` — `save(key, value)` and `load(key)` with JSON serialization, graceful null return on parse failure, and `StorageError` throw on write failure": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881207906
+      },
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882368487
+      }
+    ],
+    "2.2 Implement `TimeUtil` — `formatTime(date)`, `formatDate(date)`, `greetingFromHour(hour)` pure functions": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208070
+      },
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882373017
+      }
+    ],
+    "2.3 Implement `Validators` — `isValidTaskText`, `isValidLinkLabel`, `isValidUrl`, `isDuplicateUrl` pure functions": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208203
+      },
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882377425
+      }
+    ],
+    "3.1 Implement `GreetingPanel.render()` — reads current `Date`, writes to `#greeting-time`, `#greeting-date`, `#greeting-message`; renders `\"--:--\"` / `\"Date unavailable\"` / `\"Good Day\"` if `Date()` throws or returns invalid": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208279
+      }
+    ],
+    "3.2 Implement `GreetingPanel.init()` — calls `render()` immediately and starts a single shared 60-second `setInterval` for subsequent ticks; tick also updates greeting if a time-of-day boundary has crossed": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208356
+      }
+    ],
+    "3.3 Add `#greeting-time`, `#greeting-date`, `#greeting-message` DOM targets to `index.html` and wire into `init()`": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208537
+      }
+    ],
+    "4. Checkpoint — Verify Greeting Panel": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208644
+      }
+    ],
+    "5.1 Implement `FocusTimer` state (`remaining`, `running`, `intervalId`) and `formatTimerDisplay(seconds)` pure helper": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208736
+      }
+    ],
+    "5.2 Implement `FocusTimer.render()` — updates `#timer-display` in `MM:SS` format and sets `#btn-start` / `#btn-stop` enabled states as strict complements; shows session-complete message in `#timer-status` when `remaining === 0`": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208802
+      }
+    ],
+    "5.3 Implement `FocusTimer.tick()`, `FocusTimer.start()`, `FocusTimer.stop()`, `FocusTimer.reset()` with correct state transitions; ignore redundant start/stop activations; `reset()` always produces `remaining === 1500, running === false`": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881208955
+      }
+    ],
+    "5.4 Implement `FocusTimer.init()`, add `#timer-display`, `#btn-start`, `#btn-stop`, `#btn-reset`, `#timer-status` to `index.html`, and attach event listeners": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209022
+      }
+    ],
+    "6. Checkpoint — Verify Focus Timer": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209092
+      }
+    ],
+    "7.1 Implement `createTask(text)` pure helper returning `{ id, text, done: false, createdAt }` using `crypto.randomUUID()` with `Math.random()` fallback": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209158
+      }
+    ],
+    "7.3 Implement `TodoList.init()` — loads from `tld_tasks` via `Storage.load()`, treats null as empty array, renders; handles malformed JSON silently": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209243
+      }
+    ],
+    "7.4 Implement `TodoList.persist()` — writes `tasks` array to `tld_tasks`; on `StorageError` shows appropriate inline error message": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209302
+      }
+    ],
+    "7.5 Implement `TodoList.add(text)` — validates with `Validators.isValidTaskText`, creates task, prepends to array, calls `persist()`, calls `render()`; on empty/whitespace shows \"Task description is required.\" and retains input value; on >500 chars shows character-limit message": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209375
+      }
+    ],
+    "7.7 Implement `TodoList.edit(id, newText)` — in-place editing with `maxlength=\"500\"`, validates new text, updates task, calls `persist()` and `render()`; on whitespace shows error and restores original": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209478
+      }
+    ],
+    "7.8 Implement `TodoList.toggle(id)` — flips `done` state, applies/removes strikethrough class, calls `persist()` and `render()`": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209575
+      }
+    ],
+    "7.9 Implement `TodoList.delete(id)` — shows confirmation prompt; on confirm removes task, calls `persist()`, calls `render()`; on cancel leaves list unchanged; on storage failure shows error and restores task": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209649
+      }
+    ],
+    "7.10 Implement `TodoList.render()` — full re-render of `#todo-list`; add `#todo-input`, `#todo-add-btn`, `#todo-list`, `#todo-error` to `index.html` and wire event listeners": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209748
+      }
+    ],
+    "8. Checkpoint — Verify To-Do List": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209802
+      }
+    ],
+    "9.1 Implement `QuickLinks.init()` — loads from `tld_links` via `Storage.load()`, treats null as empty array, renders; on malformed data shows \"saved links could not be loaded\" message": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209905
+      }
+    ],
+    "9.2 Implement `QuickLinks.persist()` — writes `links` array to `tld_links`; on `StorageError` shows appropriate error message": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881209981
+      }
+    ],
+    "9.3 Implement `QuickLinks.add(label, url)` — validates with `isValidLinkLabel`, `isValidUrl`, `isDuplicateUrl`; on success creates link, appends, calls `persist()` and `render()`; on failure shows specific validation message without adding link": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210044
+      }
+    ],
+    "9.4 Implement `QuickLinks.open(id)` — calls `window.open(url, '_blank')`; if URL empty or missing, button is disabled with visual indicator; if URL lacks http/https prefix, shows error and does not open": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210205
+      }
+    ],
+    "9.5 Implement `QuickLinks.delete(id)` — removes link immediately from displayed collection, calls `persist()`; on storage failure shows error and restores link to original position": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210397
+      }
+    ],
+    "9.6 Implement `QuickLinks.render()` — renders `#links-list` with label buttons and delete controls; add `#links-label-input`, `#links-url-input`, `#links-add-btn`, `#links-list`, `#links-error` to `index.html` and wire event listeners": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210503
+      }
+    ],
+    "10. Checkpoint — Verify Quick Links": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210669
+      }
+    ],
+    "11.1 Finalize `init()` — call `GreetingPanel.init()`, `FocusTimer.init()`, `TodoList.init()`, `QuickLinks.init()` in sequence on `DOMContentLoaded`": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210777
+      }
+    ],
+    "11.2 Apply responsive CSS layout — ensure all four panels render correctly side-by-side (or stacked on narrow viewports) in Chrome, Firefox, Edge, and Safari": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210847
+      }
+    ],
+    "11.3 Add unsupported-browser detection — on load, check User-Agent or feature-detect; if browser is not a recognized modern target, display a banner indicating it may not be fully supported": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881210965
+      }
+    ],
+    "12. Final checkpoint — Full verification": [
+      {
+        "executionId": "ffd5a927-f406-4166-a9f8-c27df227f255",
+        "chatSessionId": "sess_27370454-3b5a-4b95-a7af-0eb16cc14445",
+        "timestamp": 1787881211063
+      }
+    ],
+    "13.1 Implement `ThemeManager.apply(theme)` — sets `document.documentElement.setAttribute('data-theme', theme)`; all CSS colours must use custom properties driven by `[data-theme]` selectors so a single attribute flip applies the theme universally": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882355976
+      }
+    ],
+    "13.2 Implement `ThemeManager.getCurrent()` — returns `document.documentElement.getAttribute('data-theme') || 'light'`": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356103
+      }
+    ],
+    "13.3 Implement `ThemeManager.init()` — reads `tld_theme` from `Storage`; if present, calls `apply()` with saved value; if absent, checks `window.matchMedia('(prefers-color-scheme: dark)')`; if that matches applies `'dark'`; otherwise falls back to `'light'`; called before initial render to prevent theme flash": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356219
+      }
+    ],
+    "13.4 Implement `ThemeManager.toggle()` — reads current theme via `getCurrent()`, flips to opposite, calls `apply()`, persists new value to `tld_theme` via `Storage.save()`": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356328
+      }
+    ],
+    "13.5 Add `#theme-toggle-btn` to `index.html`; attach click handler calling `ThemeManager.toggle()`; update button label/icon to reflect the current theme after each toggle; call `ThemeManager.init()` at the top of the main `init()` function before other modules initialise": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356405
+      }
+    ],
+    "13.6 Update `css/style.css` — replace all hard-coded colour values with CSS custom properties; add `:root[data-theme=\"light\"]` and `:root[data-theme=\"dark\"]` variable blocks covering background, text, surface, border, and accent colours; verify WCAG 4.5:1 minimum contrast ratio in both themes for all text and interactive elements": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356489
+      }
+    ],
+    "14.1 Extend `GreetingPanel.render()` — reads `tld_displayName` via `Storage.load('tld_displayName')`; if non-empty and non-whitespace-only, appends `\", [Name]\"` to the greeting string (e.g. `\"Good Morning, Alex\"`); if absent or empty renders the greeting without a name suffix, preserving existing behaviour": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356566
+      }
+    ],
+    "14.2 Implement `GreetingPanel.getName()` — returns `Storage.load('tld_displayName') || ''`": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356641
+      }
+    ],
+    "14.3 Implement `GreetingPanel.setName(name)` — validates that `name.trim().length >= 1` and `name.trim().length <= 50`; on valid: trims the value, persists to `tld_displayName` via `Storage.save()`, calls `render()`; on invalid (empty or whitespace-only): shows `\"Name cannot be blank.\"` in `#greeting-name-error` and does not update storage; on storage failure: retains name in session and shows appropriate error message": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356713
+      }
+    ],
+    "14.4 Implement `GreetingPanel.clearName()` — removes `tld_displayName` from Storage (write empty string or remove key), calls `render()` so greeting reverts to nameless form": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356908
+      }
+    ],
+    "14.5 Add `#greeting-name-input` (`maxlength=\"50\"`), `#greeting-name-btn` (save/set action), and `#greeting-name-error` to `index.html` inside the Greeting Panel; attach event listener on `#greeting-name-btn` to call `GreetingPanel.setName()`; attach a separate clear control that calls `GreetingPanel.clearName()`; restore saved name into the input on page load if `tld_displayName` is present": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882356995
+      }
+    ],
+    "15. Final checkpoint — Full verification": [
+      {
+        "executionId": "bdb22762-7f39-4ab1-8a69-eacb1cc2d3e9",
+        "chatSessionId": "sess_34721485-38e9-4064-a22c-fc08e030de8c",
+        "timestamp": 1787882357066
+      }
+    ]
+  }
+}

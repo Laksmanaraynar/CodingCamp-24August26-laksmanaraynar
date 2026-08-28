@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="unsupported-browser-banner" class="unsupported-banner" hidden>
+      Your browser may not be fully supported. For the best experience, please
+      use the latest stable version of Chrome, Firefox, Edge, or Safari.
+    </div>
+
+    <!-- Header global dengan tombol toggle tema -->
+    <header class="app-header">
+      <button id="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span aria-hidden="true">☀️</span>
+        <span class="sr-only">Switch to dark mode</span>
+      </button>
+    </header>
+
+    <main class="dashboard">
+      <!-- Greeting Panel -->
+      <section id="greeting-panel" class="panel" aria-label="Greeting">
+        <h2 id="greeting-message" aria-live="polite">Good Day</h2>
+        <p id="greeting-time" aria-live="polite">--:--</p>
+        <p id="greeting-date" aria-live="polite">Date unavailable</p>
+      </section>
+
+      <!-- Focus Timer Panel -->
+      <section id="focus-timer-panel" class="panel" aria-label="Focus Timer">
+        <h2>Focus Timer</h2>
+        <div class="timer-duration">
+  <label for="timer-minutes">Duration (minutes)</label>
+  <input
+    id="timer-minutes"
+    type="number"
+    min="1"
+    max="180"
+    value="25"
+    aria-label="Timer duration in minutes"
+  />
+</div>
+
+<div
+  id="timer-display"
+  aria-live="polite"
+  aria-label="Timer display"
+>
+  25:00
+</div>
+        <div id="timer-status" aria-live="assertive" aria-label="Timer status"></div>
+        <div class="timer-controls">
+          <button id="btn-start" type="button">Start</button>
+          <button id="btn-stop" type="button" disabled>Stop</button>
+          <button id="btn-reset" type="button">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List Panel -->
+      <section id="todo-panel" class="panel" aria-label="To-Do List">
+        <h2>To-Do List</h2>
+        <div class="todo-input-row">
+          <label for="todo-input" class="sr-only">New task description</label>
+          <input
+            id="todo-input"
+            type="text"
+            maxlength="500"
+            placeholder="Add a new task…"
+            aria-label="New task description"
+          />
+          <button id="todo-add-btn" type="button">Add</button>
+        </div>
+        <p id="todo-error" class="error-message" aria-live="polite" hidden></p>
+        <ul id="todo-list" aria-label="Task list"></ul>
+      </section>
+
+      <!-- Quick Links Panel -->
+      <section id="quick-links-panel" class="panel" aria-label="Quick Links">
+        <h2>Quick Links</h2>
+        <div class="links-input-row">
+          <label for="links-label-input" class="sr-only">Link label</label>
+          <input
+            id="links-label-input"
+            type="text"
+            maxlength="100"
+            placeholder="Label"
+            aria-label="Link label"
+          />
+          <label for="links-url-input" class="sr-only">Link URL</label>
+          <input
+            id="links-url-input"
+            type="url"
+            placeholder="https://example.com"
+            aria-label="Link URL"
+          />
+          <button id="links-add-btn" type="button">Add</button>
+        </div>
+        <p id="links-error" class="error-message" aria-live="polite" hidden></p>
+        <ul id="links-list" aria-label="Quick links list"></ul>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
